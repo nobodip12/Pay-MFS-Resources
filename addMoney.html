@@ -10,45 +10,55 @@
   <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
       <header>
+        <!-- login page add money -->
         <nav class="flex justify-around">
           <div class="flex justify-center">
             <div><img class="w-16" src="./assets/Group.png" alt="" /></div>
             <div>
-              <h1 class="text-3xl font-bold">$ <samp id="main-balance">45000</samp></h1>
+              <h1 class="text-3xl font-bold">$ <span id="main-balance">45000</span></h1>
               <p class="p-2">Available Balance</p>
             </div>
           </div>
           <button class="btn border">Log Out</button>
         </nav>
         <section class="mt10 mx-4">
+          <!-- welcome massage section  -->
           <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
           <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+          <!-- pay mobile cards style -->
           <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+            <!-- card 1 -->
             <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
               <h3>Add Money</h3>
             </div>
+            <!-- card 2 -->
             <div id="cashout-box" class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/send1.png" alt="" />
               <h3>Cashout</h3>
             </div>
+            <!-- card 3 -->
             <div class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
               <h3>Transfer Money</h3>
             </div>
+            <!-- card 4 -->
             <div class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="" />
               <h3>Get Bonus</h3>
             </div>
+            <!-- card 5 -->
             <div class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/purse1.png" alt="" />
               <h3>Pay Bill</h3>
             </div>
+            <!-- card 6 -->
             <div class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
               <h3>Transactions</h3>
             </div>
           </div>
+          <!-- add money payment section -->
           <section id="addmoney" class="mt-8">
             <h1 class="font-bold ml-10">Add Money</h1>
             <div class="">
@@ -65,7 +75,8 @@
                     <fieldset class="fieldset">
                       <label>Bank Account Number</label>
                       <input
-                        type="number"
+                        type="text"
+                        id="account-number"
                         class="input"
                         placeholder="Enter 11 digit account Number"
                         required
@@ -99,7 +110,7 @@
               </div>
             </div>
           </section>
-          <!-- cashout section -->
+          <!-- cashout payment section -->
           <section id="cashout">
             <h1 class="font-bold ml-10">Cash Out</h1>
             <div class="">
@@ -110,6 +121,7 @@
                       <label>Agent Number</label>
                       <input
                         type="number"
+                        id="agent-number"
                         class="input"
                         placeholder="Enter 11 digit number"
                         required
@@ -117,7 +129,7 @@
                       <label>Amount</label>
                       <input
                         type="number"
-                        id="amount"
+                        id="cashout-amount"
                         class="input"
                         placeholder="Enter amount to withdraw"
                         required
@@ -125,14 +137,14 @@
                       <label>Pin Number</label>
                       <input
                         type="text"
-                        id="pin"
+                        id="cashout-pin"
                         class="input"
                         value="1234"
                         placeholder="Enter 4 digit pin number"
                         required
                       />
                       <button
-                        id="add-money"
+                        id="cashout-btn"
                         class="btn btn-neutral border-none bg-blue-700 mt-4 rounded-full"
                       >
                         Withdraw Money
@@ -146,7 +158,9 @@
         </section>
       </header>
     </section>
+    <script src="./utilities/utilities.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggal.js"></script>
+    <script src="./script/cashout.js"></script>
   </body>
 </html>
