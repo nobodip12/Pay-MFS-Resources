@@ -53,7 +53,7 @@
               <h3>Pay Bill</h3>
             </div>
             <!-- card 6 -->
-            <div class="box cursor-pointer border p-4 text-center rounded-sm">
+            <div id="transection-box" class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
               <h3>Transactions</h3>
             </div>
@@ -65,17 +65,17 @@
               <div class="hero-content flex-col lg:flex-row-reverse">
                 <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                   <div class="card-body">
-                    <label for="addmoney">Select a Bank</label>
-                    <select id="addmoney" class="select">
+                    <label for="allBank">Select a Bank</label>
+                    <select id="allBank" class="select">
                       <option disabled selected>Select Bank</option>
                       <option value="Bkash">Bkash</option>
                       <option value="Nagad">Nagad</option>
-                      <option value="DBBl">Dbbl</option>
+                      <option value="DBBl">DBBl</option>
                     </select>
                     <fieldset class="fieldset">
                       <label>Bank Account Number</label>
                       <input
-                        type="text"
+                        type="number"
                         id="account-number"
                         class="input"
                         placeholder="Enter 11 digit account Number"
@@ -111,7 +111,7 @@
             </div>
           </section>
           <!-- cashout payment section -->
-          <section id="cashout">
+          <section id="cashout" class="mt-8">
             <h1 class="font-bold ml-10">Cash Out</h1>
             <div class="">
               <div class="hero-content flex-col lg:flex-row-reverse">
@@ -155,6 +155,13 @@
               </div>
             </div>
           </section>
+          <!--transection history section  -->
+          <section id="transection-history" class="mt-8">
+            <h1 class="font-bold ml-10">Transection History</h1>
+            <div id="transaction-container">
+
+            </div>
+          </section>
         </section>
       </header>
     </section>
@@ -162,5 +169,6 @@
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggal.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transectionHistory.js"></script>
   </body>
 </html>
